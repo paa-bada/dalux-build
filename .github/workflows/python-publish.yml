@@ -115,7 +115,7 @@ jobs:
         if: steps.ver.outputs.skip != 'true'
         working-directory: python
         run: |
-          pip install -e ".[dev]"
+          pip install -e ".[dev,webhook]"
           pytest
 
       - name: Install build & build distributions
